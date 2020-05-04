@@ -1,0 +1,145 @@
+@import 'variables';
+@import 'utilities';
+@import 'section';
+
+
+body{
+    background: $main-light;
+    color: $main-color;
+    font-family: $main-font;
+    font-size:12px;
+    line-height: 1.2;
+}
+
+img{
+    width:100%;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+
+header{
+    @include SECTIONBG-M;
+    @include SECTIONBG-D;
+    text-align: center;
+    color: $main-dark;
+    .logo{
+        width: 30%;
+    }
+
+    img{
+        width:100%;
+    }
+}
+
+.features{
+    background:white;
+    text-align:center;
+
+    .feature{
+        width:100%;
+        @include ALIGNCENTER;
+        @include BOXSHADOW-A(5);
+        border-radius: 18px;
+
+    }
+}
+
+.call-for-action{
+    background:white;
+    position:relative;
+    height:auto;
+    text-align: center;
+    &:after{
+        position:absolute;
+        content:"";
+        width:100%;
+        height:100%;
+        background: $main-dark;
+        top:50%;
+        left:0;
+    }
+
+
+    &-banner{
+        width:90%;
+        background:white;
+        @include BOXSHADOW-A(2);
+        z-index:1;
+        border-radius: 5px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+
+       
+    }
+}
+
+footer{
+    background: $main-dark;
+    color:white;
+
+    .logo{
+        width:150px;
+    }
+    table{
+        i{
+            margin-right:2rem;
+        }
+        td{
+            padding-top:1rem;
+            vertical-align: top;
+        }
+    }
+    .social-media{
+        ul{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 120px;
+            @include ALIGNCENTER;       
+        }
+        
+        i{
+            font-size:1rem;
+            padding: 3px 5px;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+    }
+
+    .flex-box{
+        @media (max-width:900px){
+            display:block;
+        }
+    }
+    p{
+        margin-bottom:1rem;
+    }
+    .copy-right{
+        text-align:center;
+        @media (min-width:900px){
+            text-align:right;
+        }
+    }
+    
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -1,0 +1,83 @@
+.heading-text{
+    font-family: $heading-font;
+    color: $main-dark;
+}
+
+.large{
+    font-size:1.5rem;
+}
+
+.lead{
+    font-size:1.2rem;
+}
+
+.lh-2{
+    line-height: 1.6;
+}
+
+//Layout
+.wrapper{
+    padding: 0 4%;
+}
+
+@for $i from 1 through 5{
+    .py-#{$i}{ padding: 1rem*$i 0;}
+}
+@for $i from 1 through 5{
+    .p-#{$i}{ padding: 1rem*$i;}
+}
+
+@for $i from 1 through 5{
+    .my-#{$i}{ margin: 1rem*$i 0;}
+}
+
+.flex-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin BOXSHADOW-B{
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+@mixin ALIGNCENTER{
+    margin-left:auto;
+    margin-right:auto;
+}
+@mixin ALIGNRIGHT{
+
+    margin-right:0;
+}
+
+
+@mixin BOXSHADOW-A($i){
+    box-shadow: $i*1px 0 $i*2px rgba(0,0,0,0.05),0 $i*1px $i*2px rgba(0,0,0,0.05);
+}
+
+//BUTTON
+
+.btn{
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    @include BOXSHADOW-B;
+    border-radius: 2rem;
+   
+
+    &.btn-white{
+        background: white;
+        color: $main-dark;
+    }
+
+    &.btn-primary{
+        background: $primary-color;
+        color:white;
+        max-width:200px;
+        @include ALIGNCENTER;
+    }
+
+    &.btn-large{
+        width:70%;
+        @include ALIGNCENTER;
+    }
+}
