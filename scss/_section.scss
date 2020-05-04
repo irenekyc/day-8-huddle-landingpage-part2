@@ -1,11 +1,11 @@
 @mixin SECTIONBG-M{
-    @media (max-width:767px){
+    @media (max-width:766px){
         background: url('../images/bg-hero-mobile.svg') no-repeat top;
     }
 }
 
 @mixin SECTIONBG-D{
-    @media (min-width:768px){
-        background: url('../images/bg-hero-destop.svg') no-repeat top;
+    @media (min-width:767px){
+        background: url('../images/bg-hero-desktop.svg') no-repeat top;
     }
 }

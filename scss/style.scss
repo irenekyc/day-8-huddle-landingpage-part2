@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'utilities';
-@import 'section';
+@import 'header';
+@import 'features';
 
 
 body{
@@ -33,10 +34,16 @@ a{
 header{
     @include SECTIONBG-M;
     @include SECTIONBG-D;
+
+    .hero{
+    @include HERODIV;
+        }
+    
     text-align: center;
     color: $main-dark;
     .logo{
         width: 30%;
+        max-width:150px;
     }
 
     img{
@@ -48,12 +55,16 @@ header{
     background:white;
     text-align:center;
 
+    
+
     .feature{
         width:100%;
         @include ALIGNCENTER;
         @include BOXSHADOW-A(5);
         border-radius: 18px;
-
+        &.flex-box{
+            @include FEATUREFLEX;
+        }
     }
 }
 
@@ -125,6 +136,15 @@ footer{
         @media (max-width:900px){
             display:block;
         }
+        table{
+            flex:2;
+        }
+        .footer-nav-link{
+            flex:1;
+        }
+        .social-media{
+            flex:1;
+        }
     }
     p{
         margin-bottom:1rem;
@@ -143,3 +163,5 @@ footer{
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@import 'responsive';

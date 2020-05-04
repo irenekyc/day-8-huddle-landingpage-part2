@@ -1,0 +1,41 @@
+@media (min-width: 767px){
+    body{
+        font-size:14px;
+    }
+    .btn{
+        padding: 1rem 2.5rem;}
+
+    .call-for-action{
+        padding:5rem 0;
+    }
+
+    .call-for-action-banner{
+        width:70%;
+        max-width:800px;
+    }
+    .large{
+        font-size:2rem;
+    }
+    .lead{
+        font-size:1.2rem;
+    }
+    .footer{
+        padding: 5rem 0;
+    }
+   
+
+}
+
+@media (min-width:1023px){
+
+    body{
+        font-size:15px;
+    }
+    .large{
+        font-size:2.5em;
+    }
+    .lead{
+        font-size:1.7rem;
+    }
+    
+}

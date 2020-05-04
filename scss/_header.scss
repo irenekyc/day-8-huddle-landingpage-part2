@@ -1,0 +1,41 @@
+@mixin SECTIONBG-M{
+    @media (max-width:766px){
+        background: url('../images/bg-hero-mobile.svg') no-repeat top;
+    }
+}
+
+@mixin SECTIONBG-D{
+    @media (min-width:767px){
+        background: url('../images/bg-hero-desktop.svg') no-repeat top;
+  
+    }
+    
+
+}
+
+@mixin HERODIV{
+    @media (max-width:766px){
+        &.flex-box{
+            display:block;
+     
+        }
+        
+   }
+    @media (min-width: 767px){
+        &.flex-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;}
+        
+        &-image{
+            width:60%;
+            img{
+                width:100%;
+            }
+        }
+
+        &-intro{
+            width:45%;
+        }
+}
+}
