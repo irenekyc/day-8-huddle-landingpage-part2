@@ -121,14 +121,21 @@ footer{
             justify-content: space-between;
             align-items: center;
             width: 120px;
-            @include ALIGNCENTER;       
+            @include ALIGNCENTER;    
+            li{
+                width:30px;
+                height:30px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: 1px solid white;
+            }
         }
         
         i{
             font-size:1rem;
-            padding: 3px 5px;
-            border-radius: 50%;
-            border: 1px solid white;
+           
         }
     }
 
